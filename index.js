@@ -1,15 +1,8 @@
-const inquirer = require('inquirer');
+const inquirer = require('inquirer'); // as per instructions, importing inquirer
 const fs = require('fs');
 const { Square, Circle, Diamond, Triangle} = require('./lib/shapes');
-const path = require('path')
-// importing inquirer, filesystem, and the shapes (circle, diamond, triagle and square)
 
-const { createWindowSVG } = require('svgdom')
-const { createCanvas } = require('canvas');
-const { SVG, registerWindow} = require('@svg.js'); //! check here
-
-const { Square, Triangle, Circle, Diamond } = require('./lib/shapes') ;
-
+// fixed function using inquirer correct syntax
 let prompts = []
 function CreateQuestions () {
     prompts = [
@@ -21,30 +14,43 @@ function CreateQuestions () {
                 return value.length <= 3 || 'Please enter up to 3 characters';
                 // validating the user inputs 3 charachters for the logo or returns a prompt
             }
-          },
-
-          {
-            type: 'input',
-            name: 'logoTextColour',
-            message: 'What colour would you like the text to be (color or hexadecimal)?',
-          },
-
-          {
-            type: 'list',
-            name: 'logoShape',
-            message: 'What shape would you like your logo to be?',
-            choices: ['circle', 'triangle', 'square', 'diamond'],
-          },
-
-          {
-            type: 'input',
-            name: 'logoShapeColour',
-            message: 'What colour would you like the shape to be (color or hexadecimal)?',
-          }
+        },
+        {
+          type: 'input',
+          name: 'logoTextColour',
+          message: 'What colour would you like the text to be (color or hexadecimal)?',
+        },
+        {
+          type: 'list',
+          name: 'logoShape',
+          message: 'What shape would you like your logo to be?',
+          choices: ['circle', 'triangle', 'square', 'diamond'],
+        },
+        {
+          type: 'input',
+          name: 'logoShapeColour',
+          message: 'What colour would you like the shape to be (color or hexadecimal)?',
+        }
     ]
+    inquirer
+  .prompt(prompts)
+  .then((answers) => {
+    console.log(answers.logoText);
+  })
+  .catch((error) => {
+    if (error.isTtyError) {
+      // Prompt couldn't be rendered in the current environment
+    } else {
+      // Something else went wrong
+    }
+  });
 }
+
+
+CreateQuestions();
+
     
-    // GENERATE LOGO FUNCTION
+// GENERATE LOGO FUNCTION
 function createLogo(prompts) {
     const { logoText, logoTextColour, logoShape, logoShapeColour} = prompts;
     const window = createWindowSVG();
