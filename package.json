@@ -1,6 +1,33 @@
 {
   "dependencies": {
-    "inquirer": "^8.2.4",
+    "inquirer": "^8.2.4"
+  },
+  "name": "svg-logo-generator",
+  "description": "Instructions:",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {
     "jest": "^29.5.0"
-  }
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AussieKing/Logo-Generator.git"
+  },
+  "keywords": [
+    "generator",
+    "svg",
+    "logo"
+  ],
+  "author": "AussieKing",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AussieKing/Logo-Generator/issues"
+  },
+  "homepage": "https://github.com/AussieKing/Logo-Generator#readme"
 }
