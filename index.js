@@ -51,7 +51,7 @@ class SVG {
 // we have to write the data into the file
 function writeToFile(fileName, data) {
     console.log(fileName, data)
-    FileSystem.writeFile(fileName, data, function(err) {
+    fs.writeFile(fileName, data, function(err) {
         if (err) {
             return console.log(err);
         }
@@ -67,10 +67,10 @@ async function init() {
     const answers = await inquirer.prompt(CreateQuestions); // await the answers from the user
     let textFromUser = "";
     if (answers.text.length > 4 && answers.text.length < 1) {
-        console.log("Please enter up to 3 characters"); // not valid inoput for greater than 4 char or smaller than 1.
+        console.log("Please enter up to 3 characters"); 
+        return; // not valid inoput for greater than 4 char or smaller than 1.
     } else {
         textFromUser = answers.text;
-    return;
     }
 
     console.log("Your text: ["+ textFromUser + "]"); // our user's text
@@ -103,7 +103,7 @@ async function init() {
     else {
         console.log("Please enter a valid shape");
     }
-    shape.setColor(logoShapeColour);
+    newShape.setColor(logoShapeColour);
 
     // adding the text and shape to the SVG file
     let newSVG = new SVG();
