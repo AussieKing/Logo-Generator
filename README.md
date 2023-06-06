@@ -1,21 +1,36 @@
-Instructions:
 
-Because this Challenge requires a video submission, refer to the Full-Stack Blog video submission guideLinks to an external site. for guidance on creating and sharing a video.
+# Logo-Generator
 
-Your application should use JestLinks to an external site. for running the unit tests and InquirerLinks to an external site. for collecting input from the user. The application will be invoked by using the following command: node index.js
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.md)
 
-Make sure that you remove dist from the .gitignore file so that Git will track this folder and include it when you push up to your application's repository.
+## Table of Contents
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
 
-The application must include Triangle, Circle, and Square classes, as well as tests for each of these classes using Jest. While not a requirement, it is recommended that you place any common functionality and properties shared by the Triangle, Circle, and Square classes in a parent Shape class and use inheritance to reuse the code in the child classes.
+## Description
+This application allows the user to respond to prompts and generate a file ("logo.svg") with the answers given. 
 
-Each shape class should be tested for a render() method that returns a string for the corresponding SVG file with the given shape color.
+## Installation
+To install the necessary dependencies, run the following command(s):
+- Clone the repository. 
 
-The following example test should pass:
-const shape = new Triangle();
-shape.setColor("blue");
-expect(shape.render()).toEqual('<polygon points="150, 18 244, 182 56, 182" fill="blue" />');
+## Usage
+enter here
 
+## License
+This application is covered under the MIT license.
 
-You may need to add additional files in the lib folder for handling user input, writing to a file, etc. Writing tests for these additional files is optional.
+## Contributing
+Node.js , Jest, JavaScript, VS Code, Shiedls.io (license badge in README), Inquirer.js
 
+## Tests
+To run tests, use the following command(s):
+As recommended, we have a test file "shapes.test.js", used to test that our code and application run smoothly. here is a screenshot of npm test and the results (passing the tests).
 
+## Questions
+For any questions or inquiries, please reach out to me via GitHub: [AussieKing](https://github.com/AussieKing) or email me at fede.dordoni@gmail.com.
