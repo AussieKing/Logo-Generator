@@ -60,6 +60,9 @@ This application is covered under the MIT license.
 - [Shiedls.io](https://shields.io/) (license badge in README)
 
 ## Contributing
+This is a part of the Full-Stack Developer course, and as such contributing is not allowed, as we get graded based on assignments. You are welcome, however, to clone the repo on you local device! Thank you.
+
+## Credits
 Our awesome teacher, TA, and the amazing people from support of the edX Full Stack Developer bootcamp!
 
 
